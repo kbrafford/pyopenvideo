@@ -9,19 +9,19 @@ import numpy
 #
 # Build the pyd with python setup.py build_ext --inplace
 #
-desc = """"""
+desc = """Wrapper for AMD's OpenVideo DECODE library"""
 
 INCLUDEDIR = r'../include'
 LIBDIR = r'../lib'
 
 setup(
-    name = 'pyopenvideo',
+    name = 'decode',
     version = '0.1',
     description = desc,
     cmdclass = {'build_ext': build_ext},                  
     #packages = [''],
-    ext_modules = [Extension("pyopenvideo",
-                             ["pyopenvideo.pyx"],
+    ext_modules = [Extension("decode",
+                             ["decode.pyx"],
                              include_dirs = [".",
                                              INCLUDEDIR,
                                              numpy.get_include(),
